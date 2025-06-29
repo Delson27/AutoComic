@@ -1,0 +1,15 @@
+# Virtual environment
+comic/
+
+# Data folders
+data/
+
+# Logs
+logs/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# VSCode settings
+.vscode/
