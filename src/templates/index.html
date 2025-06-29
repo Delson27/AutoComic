@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Strip Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Comic Strip Generator</h1>
+            <p class="lead">Upload a video to generate comic-style frames</p>
+        </div>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="videoFile">Select Video File:</label>
+                <input type="file" id="videoFile" name="video" accept="video/*" class="form-control" required />
+                <small class="form-text text-muted">Supported formats: MP4, AVI, MOV, MKV</small>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Generate Comic Frames</button>
+        </form>
+        
+        <div id="loading" class="loading">
+            <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+            <p class="mt-2">Processing your video... Please wait</p>
+        </div>
+        
+        <div id="result" class="result"></div>
+        <div id="gallery" class="gallery"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 

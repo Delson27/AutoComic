@@ -1,0 +1,135 @@
+body {
+    background: url('../background_image.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 32px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+    padding: 2rem 1.5rem;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.result {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.frame-container {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.frame-container h5 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.frame-pair {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame-pair img {
+    width: 48%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.loading.active {
+    display: block;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+form#uploadForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-group {
+    width: 100%;
+}
+
+input[type="file"],
+button[type="submit"] {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#result, .result {
+    width: 100%;
+    text-align: center;
+}
+
+#gallery, .gallery {
+    width: 100%;
+} 
